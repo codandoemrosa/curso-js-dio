@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  text-transform: lowercase;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 177, 202);
+}
+
+/* TITLE */
+
+.header {
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: rgb(255, 177, 202);
+  position: absolute;
+  font-size: 15vmin;
+}
+
+/* TITLE ANIMATION */
+
+.border {
+  color: rgb(255, 177, 202);
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.wave {
+  color: white;
+  animation: shift 3s ease-in-out infinite;
+}
+
+/* TEXT */
+
+p {
+  font-size: 20px;
+}
+
+/* COUNTER */
+
+button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 16pt;
+  font-weight: 600;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #FFFFFF;
+  color: rgb(255, 177, 202);
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+
+#counter {
+  display: flex;
+}
+
+#currentNumber {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  font-size: 16pt;
+}
+
+@keyframes shift {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
