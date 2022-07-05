@@ -23,8 +23,6 @@ function decrement(){
   }
 }
 
-document.addEventListener('click', paintRed);
-
 /* ENABLE AND DISABLE BUTTONS */ 
 
 function disableAddButton() {
@@ -40,6 +38,9 @@ function disableSubtractButton(){
 function paintRed(){
   if(count < 0){
     document.getElementById('currentNumber').style.color = "red";
+  }
+  else{
+    document.getElementById('currentNumber').style.color = "white";
   }
 }
 
