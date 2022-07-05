@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*:before,
+*:after {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(255, 177, 202);
+}
+
+.card {
+  padding: 45px;
+  width: 40%;
+  min-width: 450px;
+  position: absolute;
+  min-height: 100px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: white;
+  border-radius: 10px;
+}
+
+#newtask input {
+  width: 75%;
+  height: 45px;
+  font-size: 15px;
+  border: 2px solid rgb(255, 177, 202);
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+#newtask input:focus {
+  outline: none;
+  border-color: gray;
+}
+
+#newtask button {
+  position: relative;
+  float: right;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: rgb(255, 177, 202);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+#tasks {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.task {
+  background-color: #c5e1e6;
+  height: 50px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.task span {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.task button {
+  background-color: #c5e1e6;
+  height: 100%;
+  width: 40%;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
