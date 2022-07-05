@@ -1,19 +1,47 @@
 let count = 0;
-
+var button = document.querySelector('button');
 
 const CURRENT_NUMBER = document.getElementById('currentNumber');
 
 function increment(){
-  count++;
-  CURRENT_NUMBER.innerHTML = count;
+  if(count < 10){ 
+    count++
+    CURRENT_NUMBER.innerHTML = count; 
+  }   
+  else {
+    disableAddButton();
+  }
 }
 
 function decrement(){
- count--;
- CURRENT_NUMBER.innerHTML = count;
+  if (count > -10){
+  count--;
+  CURRENT_NUMBER.innerHTML = count;
+  }
+  else{
+    disableSubtractButton();
+  }
 }
 
+document.addEventListener('click', paintRed);
 
+/* ENABLE AND DISABLE BUTTONS */ 
+
+function disableAddButton() {
+  button = document.getElementsByName('add')
+  button.disabled = true;
+}
+
+function disableSubtractButton(){
+  button = document.getElementsByName('subtract')
+  button.disabled = true;
+}
+
+function paintRed(){
+  if(count < 0){
+    document.getElementById('currentNumber').style.color = "red";
+  }
+}
 
 
 /* tente implementar addEventListener
